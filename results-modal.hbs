@@ -1,0 +1,128 @@
+<div class="webkite-result-modal">
+  <div class="webkite-modal-content">
+    <div class="webkite-modal-block-forty">
+  <img src="{{#facet name="Logo"}}{{displayValue}}{{/facet}}"/>
+  <h2>{{#facet name="Company Name"}}{{displayValue}}{{/facet}}</h2>
+  <ul>
+    <li>
+      <b>location</b>
+      <span class="facet-values location">
+        {{#facet name="City"}}<a href="#" class="webkite-add-filter city" data-facet="{{name}}" data-operator="is" data-value="{{this}}">{{displayValue}}</a>{{/facet}}
+        {{#facet name="State"}}<a href="#" class="webkite-add-filter state" data-facet="{{name}}" data-operator="is" data-value="{{this}}">{{displayValue}}</a>{{/facet}}
+        {{#facet name="Country"}}<a href="#" class="webkite-add-filter country" data-facet="{{name}}" data-operator="is" data-value="{{this}}">{{displayValue}}</a>{{/facet}}
+      </span>
+    </li>
+    <li>
+    <b>website</b>
+    {{#facet name="Website"}}
+    <span class="facet-values">
+      <a class="webkite-website" href="{{displayValue}}">{{displayValue}}</a>
+    </span>
+    {{/facet}}
+    </li>
+    <li>
+    {{#facet name="Status"}}
+      {{#if filterable}}
+      <b class="inline-filter-button">
+        <a class="webkite-toggle" data-target=".{{../../id}}-{{name}}-menu">{{downcase name}}<i></i></a>
+        <ul class="{{../../id}}-{{name}}-menu inline-filter-menu webkite-hide webkite-menu">
+          {{#each filterableValues}}
+          <li><a href="#" class="webkite-add-filter webkite-toggle" data-target=".{{../../../id}}-{{../name}}-menu" data-facet="{{../name}}" data-operator="is" data-value="{{this}}">{{this}}</a></li>
+          {{/each}}
+        </ul>
+      </b>
+      {{else}}
+      <b>{{downcase name}}</b>
+      {{/if}}
+      {{#if filterable}}
+      <span class="facet-values">
+        {{#each values}}
+        <a href="#" class="webkite-add-filter" data-facet="{{../name}}" data-operator="is" data-value="{{this}}">{{this}}</a>{{#unless @last}}, <br>{{/unless}}
+        {{/each}}
+      </span>
+      {{else}}
+      <span class="facet-values">
+      {{displayValue}}
+      </span>
+      {{/if}}
+    {{/facet}}
+    </li>
+	</ul>
+</div><!-- webkite-modal-block-forty -->
+    <div class="webkite-modal-block-sixty">
+  <ul>
+      {{#facet name="Description"}}<li><p class="description">{{displayValue}}</p></li>{{/facet}}
+      <li>
+        {{#facet name="Stage"}}
+        {{#if filterable}}
+        <b class="inline-filter-button">
+          <a class="webkite-toggle" data-target=".{{../../id}}-{{name}}-menu">{{downcase name}}<i></i></a>
+          <ul class="{{../../id}}-{{name}}-menu inline-filter-menu webkite-hide webkite-menu">
+            {{#each filterableValues}}
+            <li><a href="#" class="webkite-add-filter webkite-toggle" data-target=".{{../../../id}}-{{../name}}-menu" data-facet="{{../name}}" data-operator="is" data-value="{{this}}">{{this}}</a></li>
+            {{/each}}
+          </ul>
+        </b>
+        {{else}}
+        <b>{{downcase name}}</b>
+        {{/if}}
+        {{#if filterable}}
+        <span class="facet-values">
+          {{#each values}}
+          <a href="#" class="webkite-add-filter" data-facet="{{../name}}" data-operator="is" data-value="{{this}}">{{this}}</a>{{#unless @last}}, <br>{{/unless}}
+          {{/each}}
+        </span>
+        {{else}}
+        <span class="facet-values">
+        {{displayValue}}
+        </span>
+        {{/if}}
+        {{/facet}}
+        </li>
+        <li>
+          <b>investment date</b>
+          {{#facet name="Investment Date"}}
+          <span class="facet-values">
+          {{displayValue}}
+          </span>
+          {{/facet}}
+        </li>
+        <li>
+          <b>amount raised</b>
+          {{#facet name="Amount Raised"}}
+          <span class="facet-values">
+          {{displayValue}}
+          </span>
+          {{/facet}}
+        </li>
+        <li>
+          <b>exit date</b>
+          {{#facet name="Exit Date"}}
+          <span class="facet-values">
+          {{displayValue}}
+          </span>
+          {{/facet}}
+        </li>
+         <li>
+          <b>exit size</b>
+          {{#facet name="Exit Size"}}
+          <span class="facet-values">
+          {{displayValue}}
+          </span>
+          {{/facet}}
+        </li>
+         <li>
+          <b>current state</b>
+          {{#facet name="Current Size"}}
+          <span class="facet-values">
+          {{displayValue}}
+          </span>
+          {{/facet}}
+        </li>
+    </ul>
+</div><!-- webkite-moal-block-sixty -->
+  </div><!-- webkite-modal-content -->
+  <div class="webkite-modal-foot">
+    <a href="#{{this.id}}" data-id={{this.id}} class="webkite-toggle-item less-button" data-animate="200ms" data-speed="100ms">less</a>
+  </div>
+</div><!-- webkite-result-modal -->
