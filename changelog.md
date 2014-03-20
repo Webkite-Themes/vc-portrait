@@ -4,7 +4,7 @@
 
 ###0.1.0
 
-* Initial port of the Business Directory Landscape to act as the basis for VC Landscape
+* Initial port of the Business Directory Portrait to act as the basis for VC Portrait
 * Content rearranged and calling the proper facet names
 * Currently, city, state, and country do not have an inline menu since they're all rolled up into the "location" value
 * Disabled styles for pagination once you've reached the end or are at the beginning of a result set
