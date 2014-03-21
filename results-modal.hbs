@@ -1,15 +1,15 @@
 <div class="webkite-result-modal">
   <div class="webkite-modal-content">
     <div class="webkite-modal-block-forty">
-  <img src="{{#facet name="Logo"}}{{displayValue}}{{/facet}}"/>
-  <h2>{{#facet name="Company Name"}}{{displayValue}}{{/facet}}</h2>
+  {{#facet name="Logo"}}<div class="image-wrapper"><img src="{{displayValue}}"/></div>{{/facet}}
+  {{#facet name="Company Name"}}<h2>{{displayValue}}</h2>{{/facet}}
   <ul>
     <li>
       <b>location</b>
       <span class="facet-values location">
-        {{#facet name="City"}}<a href="#" class="webkite-add-filter city" data-facet="{{name}}" data-operator="is" data-value="{{this}}">{{displayValue}}</a>{{/facet}}
-        {{#facet name="State"}}<a href="#" class="webkite-add-filter state" data-facet="{{name}}" data-operator="is" data-value="{{this}}">{{displayValue}}</a>{{/facet}}
-        {{#facet name="Country"}}<a href="#" class="webkite-add-filter country" data-facet="{{name}}" data-operator="is" data-value="{{this}}">{{displayValue}}</a>{{/facet}}
+        {{#facet name="City"}}<p class="city">{{displayValue}}</p>{{/facet}}<!--
+              -->{{#facet name="State"}}<a href="#" class="webkite-add-filter state" data-facet="{{name}}" data-operator="is" data-value="{{displayValue}}">{{displayValue}}</a>{{/facet}}<!--
+              -->{{#facet name="Country"}}<a href="#" class="webkite-add-filter country" data-facet="{{name}}" data-operator="is" data-value="{{displayValue}}">{{displayValue}}</a>{{/facet}}
       </span>
     </li>
     <li>

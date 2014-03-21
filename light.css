@@ -477,6 +477,8 @@
     -ms-border-radius: 0.188em 0.188em 0 0;
     -o-border-radius: 0.188em 0.188em 0 0;
     border-radius: 0.188em 0.188em 0 0; }
+#webkite-results .image-wrapper {
+  width: 100%; }
 
 /************************************ PORTRAIT RESULTS */
 #webkite-results .webkite-result {
@@ -499,6 +501,8 @@
     margin-bottom: 0.625em; }
     #webkite-results .webkite-result li .city, #webkite-results .webkite-result li .state, #webkite-results .webkite-result li .country {
       display: inline; }
+    #webkite-results .webkite-result li .city + .state:before {
+      content: ", "; }
     #webkite-results .webkite-result li .city + .country:before {
       content: ", "; }
     #webkite-results .webkite-result li .state + .country:before {
@@ -619,12 +623,13 @@
       text-overflow: ellipsis;
       white-space: nowrap;
       width: 100%; }
-    #webkite-results .webkite-result-modal a.webkite-address span {
-      display: inline-block;
-      max-width: 100%; }
-      #webkite-results .webkite-result-modal a.webkite-address span.city, #webkite-results .webkite-result-modal a.webkite-address span.state {
-        display: inline; }
+    #webkite-results .webkite-result-modal .city, #webkite-results .webkite-result-modal .state, #webkite-results .webkite-result-modal .country {
+      display: inline; }
     #webkite-results .webkite-result-modal .city + .state:before {
+      content: ", "; }
+    #webkite-results .webkite-result-modal .city + .country:before {
+      content: ", "; }
+    #webkite-results .webkite-result-modal .state + .country:before {
       content: ", "; }
     #webkite-results .webkite-result-modal a.less-button {
       -webkit-box-sizing: border-box;

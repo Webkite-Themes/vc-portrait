@@ -485,6 +485,9 @@ $mainGutter: 1.25em;
       @include roundedUp(0.188em 0.188em 0 0);
       }
     }
+  .image-wrapper{
+      width: 100%;
+      }
  
   }
   
@@ -504,6 +507,7 @@ $mainGutter: 1.25em;
       text-align: left;
       margin-bottom: $mainGutter/2;
       .city, .state, .country{display: inline;}
+      .city + .state:before{content: ", ";}
       .city + .country:before{content: ", ";}
       .state + .country:before{content: ", ";}
       .city + .state:before{content: ", ";}
@@ -600,12 +604,10 @@ $mainGutter: 1.25em;
       @include ellipsisThis;
       width: 100%;  
       }
-    a.webkite-address span{
-      display: inline-block;
-      max-width: 100%;
-      &.city, &.state{display: inline;}
-      }
+    .city, .state, .country{display: inline;}
     .city + .state:before{content: ", ";}
+    .city + .country:before{content: ", ";}
+    .state + .country:before{content: ", ";}
     a.less-button{
       @include boxedUp;
       @include roundedUp(.188em);
