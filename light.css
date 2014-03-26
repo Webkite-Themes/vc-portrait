@@ -6,6 +6,10 @@
     box-shadow: none;
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
+    word-wrap: normal;
+    -webkit-hyphens: manual;
+    -moz-hyphens: manual;
+    -ms-hyphens: manual;
     background: none;
     margin: 0;
     padding: 0;
@@ -218,8 +222,8 @@
     border: 1px solid rgba(0, 0, 0, 0.1);
     display: inline-block;
     height: 1.75em;
-    overflow: hidden;
     padding: 0.3125em 1.563em 0.3125em 4.563em;
+    position: relative;
     width: 100%;
     text-align: left;
     /* and & or */ }
@@ -227,7 +231,7 @@
       color: rgba(0, 0, 0, 0.6);
       font-size: .875em;
       line-height: 1.2em;
-      margin: 0 0.41667em;
+      padding: 0 0.41667em;
       vertical-align: top; }
   #webkite-results .webkite-applied-filters > .webkite-toggle {
     cursor: pointer;
@@ -263,8 +267,8 @@
     display: inline-block;
     max-width: 100%;
     overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap; }
+    white-space: nowrap;
+    width: 100%; }
   #webkite-results a.webkite-remove-filter {
     display: inline-block;
     max-width: 100%;
@@ -373,7 +377,7 @@
   display: block; }
 
 /******************************* FILTER OVERVIEW AND SHADE */
-#webkite-results .webkite-truncated::before {
+#webkite-results .webkite-truncated:before {
   content: "";
   background: -moz-linear-gradient(left, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.3) 5%, rgba(0, 0, 0, 0.15) 25%, rgba(0, 0, 0, 0.02) 75%, rgba(0, 0, 0, 0) 100%);
   background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(0, 0, 0, 0.4)), color-stop(5%, rgba(0, 0, 0, 0.3)), color-stop(25%, rgba(0, 0, 0, 0.15)), color-stop(75%, rgba(0, 0, 0, 0.02)), color-stop(100%, rgba(0, 0, 0, 0)));
@@ -382,11 +386,12 @@
   background: -ms-linear-gradient(left, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.3) 5%, rgba(0, 0, 0, 0.15) 25%, rgba(0, 0, 0, 0.02) 75%, rgba(0, 0, 0, 0) 100%);
   background: linear-gradient(to right, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.3) 5%, rgba(0, 0, 0, 0.15) 25%, rgba(0, 0, 0, 0.02) 75%, rgba(0, 0, 0, 0) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#66000000', endColorstr='#00000000',GradientType=1 );
-  height: 1.6em;
+  height: auto;
   width: 1.5em;
   position: absolute;
-  left: 4.563em;
-  top: 1px; }
+  left: 4.5em;
+  top: 0;
+  bottom: 0; }
 #webkite-results .all-current-filters {
   -webkit-border-radius: 0.188em;
   -moz-border-radius: 0.188em;
@@ -415,6 +420,8 @@
 #webkite-results {
   /* page input */
   /* remove arrows */ }
+  #webkite-results .webkite-pagination-area {
+    font: 400 1em/0 "Open Sans"; }
   #webkite-results .webkite-results-paginator {
     font-size: 1em; }
     #webkite-results .webkite-results-paginator a, #webkite-results .webkite-results-paginator p {
@@ -426,8 +433,18 @@
       line-height: 0; }
   #webkite-results .first-result-page, #webkite-results .previous-result-page {
     padding-right: 0.625em; }
+    #webkite-results .first-result-page.disabled, #webkite-results .previous-result-page.disabled {
+      color: rgba(0, 0, 0, 0.6); }
+      #webkite-results .first-result-page.disabled:hover, #webkite-results .previous-result-page.disabled:hover {
+        color: rgba(0, 0, 0, 0.6);
+        cursor: not-allowed; }
   #webkite-results .next-result-page, #webkite-results .last-result-page {
     padding-left: 0.625em; }
+    #webkite-results .next-result-page.disabled, #webkite-results .last-result-page.disabled {
+      color: rgba(0, 0, 0, 0.6); }
+      #webkite-results .next-result-page.disabled:hover, #webkite-results .last-result-page.disabled:hover {
+        color: rgba(0, 0, 0, 0.6);
+        cursor: not-allowed; }
   #webkite-results input.webkite-page-input {
     -webkit-border-radius: 0.188em;
     -moz-border-radius: 0.188em;
@@ -780,13 +797,8 @@
       font-size: .875em;
       font-weight: 400;
       max-width: 100%;
-      padding: 0.25em 0.625em;
-      white-space: pre;
-      word-wrap: normal;
-      -webkit-hyphens: manual;
-      -moz-hyphens: manual;
-      -ms-hyphens: manual;
-      hyphens: manual; }
+      padding: 0.25em 1.25em 0.25em 0.625em;
+      white-space: pre; }
       #webkite-results .webkite-result .inline-filter-menu li a:hover, #webkite-results .webkite-result-modal .inline-filter-menu li a:hover {
         background: #1b9cd2;
         color: white; }
