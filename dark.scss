@@ -312,6 +312,13 @@ $colorVariant:dark;
         }
       }
     }
+  .webkite-result-modal li b > webkite-toggle{
+	  border: 1px solid rgba(255,255,255,.15);
+	  &:hover{
+		  border: 1px solid $lighterOpacity;
+	    background: $lighterOpacity;
+	  	}
+		}
   .webkite-result .inline-filter-menu, .webkite-result-modal .inline-filter-menu{
     @include roundedUp(.375em);
     @include shadowHere;
