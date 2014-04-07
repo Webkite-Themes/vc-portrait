@@ -767,9 +767,9 @@
     #webkite-results .webkite-result li b > .webkite-toggle:hover, #webkite-results .webkite-result-modal li b > .webkite-toggle:hover {
       border: 1px solid rgba(255, 255, 255, 0.1);
       background: rgba(255, 255, 255, 0.05); }
-#webkite-results .webkite-result-modal li b > webkite-toggle {
+#webkite-results .webkite-result-modal li b > .webkite-toggle {
   border: 1px solid rgba(255, 255, 255, 0.15); }
-  #webkite-results .webkite-result-modal li b > webkite-toggle:hover {
+  #webkite-results .webkite-result-modal li b > .webkite-toggle:hover {
     border: 1px solid rgba(255, 255, 255, 0.1);
     background: rgba(255, 255, 255, 0.1); }
 #webkite-results .webkite-result .inline-filter-menu, #webkite-results .webkite-result-modal .inline-filter-menu {

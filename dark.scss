@@ -312,7 +312,7 @@ $colorVariant:dark;
         }
       }
     }
-  .webkite-result-modal li b > webkite-toggle{
+  .webkite-result-modal li b > .webkite-toggle{
 	  border: 1px solid rgba(255,255,255,.15);
 	  &:hover{
 		  border: 1px solid $lighterOpacity;
