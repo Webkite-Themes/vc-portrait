@@ -21,13 +21,13 @@
     {{/facet}}
     </li>
     <li>
-    {{#facet name="Status"}}
+      {{#facet name="Status"}}
       {{#if filterable}}
       <b class="inline-filter-button">
-        <a class="webkite-toggle" data-target=".{{../../id}}-{{name}}-menu">{{downcase name}}<i></i></a>
-        <ul class="{{../../id}}-{{name}}-menu inline-filter-menu webkite-hide webkite-menu">
+        <a class="webkite-toggle" data-target=".{{../../id}}-{{name}}-details-menu">{{downcase name}}<i></i></a>
+        <ul class="{{../../id}}-{{name}}-details-menu inline-filter-menu webkite-hide webkite-menu">
           {{#each filterableValues}}
-          <li><a href="#" class="webkite-add-filter webkite-toggle" data-target=".{{../../../id}}-{{../name}}-menu" data-facet="{{../name}}" data-operator="is" data-value="{{this}}">{{this}}</a></li>
+          <li><a href="#" class="webkite-add-filter webkite-toggle" data-target=".{{../../../id}}-{{../name}}-details-menu" data-facet="{{../name}}" data-operator="is" data-value="{{this}}">{{this}}</a></li>
           {{/each}}
         </ul>
       </b>
@@ -45,7 +45,7 @@
       {{displayValue}}
       </span>
       {{/if}}
-    {{/facet}}
+      {{/facet}}
     </li>
 	</ul>
 </div><!-- webkite-modal-block-forty -->
@@ -113,7 +113,7 @@
         </li>
          <li>
           <b>current state</b>
-          {{#facet name="Current Size"}}
+          {{#facet name="Current State"}}
           <span class="facet-values">
           {{displayValue}}
           </span>

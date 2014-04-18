@@ -11,8 +11,7 @@
   {{#each this.items}}
   <div class="webkite-result-wrapper">
     {{#facet name="Logo"}}
-    <div class="webkite-result-image" style="background-image:url({{displayValue}});">
-    </div>
+    <div class="webkite-result-image"><img src="{{displayValue}}" alt="{{../name}}" /></div>
     {{/facet}}
     <section class="webkite-result">
       {{#facet name="Company Name"}}<h2>{{displayValue}}</h2>{{/facet}}

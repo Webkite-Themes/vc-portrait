@@ -1,5 +1,3 @@
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,300,700");
-
 $colorVariant:light;
 
 //CALL UNIVERSALS
@@ -18,6 +16,7 @@ $colorVariant:light;
   @include boxedUp;
   font-family:"Open Sans";
   font-size: 16px;
+  font: 400 16px/normal "Open Sans";
   max-width: 43.75em;
   margin: 0 auto;
   padding: $mainGutter;
@@ -129,10 +128,10 @@ $colorVariant:light;
       }
     }
   .webkite-result-image{
+  	@include boxedUp;
     @include roundedUp(0.188em 0.188em 0 0);
-    background: $lighterOpacity;
-    background-position: center top;
-    background-size: cover;
+    background: white;
+    border: 1px solid $lighterOpacity;
     width:100%;
     height:0;
     padding-bottom:100%;
